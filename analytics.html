@@ -1,14 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Analytics Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<div class="chart-container">
-<canvas id="myChart"></canvas>
+</head>
+
+<body>
+
+<nav>
+<div class="logo">🎓 StudentIQ</div>
+
+<ul>
+<li><a href="index.html">Dashboard</a></li>
+<li><a href="students.html">Students</a></li>
+<li><a href="analytics.html">Analytics</a></li>
+<li><a href="reports.html">Reports</a></li>
+</ul>
+
+</nav>
+
+<div class="analytics-container">
+
+<h1>Academic Analytics Dashboard</h1>
+
+<div class="analytics-cards">
+
+<div class="analytics-card">
+<h2>90%</h2>
+<p>Pass Rate</p>
+</div>
+
+<div class="analytics-card">
+<h2>78%</h2>
+<p>Average Score</p>
+</div>
+
+<div class="analytics-card">
+<h2>95%</h2>
+<p>Topper</p>
+</div>
+
+</div>
+
+<div class="chart-grid">
+
+<div class="chart-card">
+<h3>Pass vs Fail</h3>
+<canvas id="pieChart"></canvas>
+</div>
+
+<div class="chart-card">
+<h3>Subject Performance</h3>
+<canvas id="barChart"></canvas>
+</div>
+
+</div>
+
+<div class="chart-card large-chart">
+<h3>Semester Trend</h3>
+<canvas id="lineChart"></canvas>
+</div>
+
 </div>
 
 <script>
 
-new Chart(
-document.getElementById("myChart"),
-{
+new Chart(document.getElementById("pieChart"),{
 type:"doughnut",
 data:{
 labels:["Pass","Fail"],
@@ -18,4 +79,29 @@ data:[450,50]
 }
 });
 
+new Chart(document.getElementById("barChart"),{
+type:"bar",
+data:{
+labels:["Java","Python","DBMS","CN","AI"],
+datasets:[{
+label:"Average Marks",
+data:[85,80,88,75,90]
+}]
+}
+});
+
+new Chart(document.getElementById("lineChart"),{
+type:"line",
+data:{
+labels:["Sem 1","Sem 2","Sem 3","Sem 4"],
+datasets:[{
+label:"Average Performance",
+data:[65,72,80,86]
+}]
+}
+});
+
 </script>
+
+</body>
+</html>
