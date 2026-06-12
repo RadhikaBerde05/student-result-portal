@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Analytics</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div class="sidebar">
+
+<h2>🎓 Student Portal</h2>
+
+<a href="index.html">Dashboard</a>
+<a href="students.html">Students</a>
+<a href="analytics.html">Analytics</a>
+<a href="reports.html">Reports</a>
+
+</div>
+
+<div class="main">
+
+<div class="header">
+<h1>Performance Analytics</h1>
+</div>
+
+<div class="chart-box">
+<canvas id="myChart"></canvas>
+</div>
+
+<script>
+
+const ctx =
+document.getElementById('myChart');
+
+new Chart(ctx,{
+
+type:'pie',
+
+data:{
+labels:['Pass','Fail'],
+datasets:[{
+data:[450,50]
+}]
+}
+
+});
+
+</script>
+
+</div>
+
+</body>
+</html>
