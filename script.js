@@ -7,7 +7,7 @@ status:"PASS"
 },
 
 MCA102:{
-name:"Sneha Patil",
+name:"Sneha Gangan",
 percentage:78,
 status:"PASS"
 },
