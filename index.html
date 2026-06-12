@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Student Performance Analytics Portal</title>
+
+<title>StudentIQ Analytics</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -14,146 +17,124 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
 
 <body>
 
-<div class="sidebar">
+<nav>
 
-    <h2>🎓 Student Portal</h2>
+<div class="logo">
+🎓 StudentIQ
+</div>
 
-    <a href="index.html">
-        <i class="fas fa-home"></i> Dashboard
-    </a>
+<ul>
 
-    <a href="students.html">
-        <i class="fas fa-user-graduate"></i> Students
-    </a>
+<li><a href="index.html">Dashboard</a></li>
 
-    <a href="analytics.html">
-        <i class="fas fa-chart-line"></i> Analytics
-    </a>
+<li><a href="students.html">Students</a></li>
 
-    <a href="reports.html">
-        <i class="fas fa-file-alt"></i> Reports
-    </a>
+<li><a href="analytics.html">Analytics</a></li>
+
+<li><a href="reports.html">Reports</a></li>
+
+</ul>
+
+</nav>
+
+<section class="hero">
+
+<h1>
+Student Performance Analytics System
+</h1>
+
+<p>
+Monitor academic performance and analytics
+in real time.
+</p>
+
+</section>
+
+<section class="stats">
+
+<div class="card">
+
+<i class="fas fa-users"></i>
+
+<h2>500</h2>
+
+<p>Students</p>
 
 </div>
 
-<div class="main">
+<div class="card">
 
-    <div class="header">
+<i class="fas fa-chart-line"></i>
 
-        <h1>Student Performance Analytics Portal</h1>
+<h2>90%</h2>
 
-        <p>MCA DevOps Mini Project Dashboard</p>
-
-    </div>
-
-    <div class="cards">
-
-        <div class="card">
-            <h2>500</h2>
-            <p>Total Students</p>
-        </div>
-
-        <div class="card">
-            <h2>450</h2>
-            <p>Passed Students</p>
-        </div>
-
-        <div class="card">
-            <h2>50</h2>
-            <p>Failed Students</p>
-        </div>
-
-        <div class="card">
-            <h2>95%</h2>
-            <p>Topper Percentage</p>
-        </div>
-
-    </div>
-
-    <div class="search-box">
-
-        <h2>Search Student Result</h2>
-
-        <input
-            type="text"
-            id="rollNo"
-            placeholder="Enter Roll Number (MCA101)"
-        >
-
-        <button onclick="checkResult()">
-            Search
-        </button>
-
-    </div>
-
-    <div class="result-card" id="resultCard" style="display:none;">
-
-        <h2>Student Profile</h2>
-
-        <img
-        src="https://i.pravatar.cc/150?img=12"
-        width="120"
-        style="border-radius:50%; margin:15px;">
-
-        <p>
-            <b>Name :</b>
-            <span id="studentName"></span>
-        </p>
-
-        <p>
-            <b>Roll No :</b>
-            <span id="studentRoll"></span>
-        </p>
-
-        <p>
-            <b>Percentage :</b>
-            <span id="studentPercentage"></span>
-        </p>
-
-        <p>
-            <b>Status :</b>
-            <span id="studentStatus"></span>
-        </p>
-
-        <div class="progress">
-
-            <div
-            class="progress-bar"
-            id="progressBar">
-
-            </div>
-
-        </div>
-
-        <table>
-
-            <tr>
-                <th>Subject</th>
-                <th>Marks</th>
-            </tr>
-
-            <tr>
-                <td>Java Programming</td>
-                <td id="javaMarks">90</td>
-            </tr>
-
-            <tr>
-                <td>Python</td>
-                <td id="pythonMarks">85</td>
-            </tr>
-
-            <tr>
-                <td>DBMS</td>
-                <td id="dbmsMarks">80</td>
-            </tr>
-
-        </table>
-
-    </div>
+<p>Pass Rate</p>
 
 </div>
+
+<div class="card">
+
+<i class="fas fa-trophy"></i>
+
+<h2>95%</h2>
+
+<p>Top Score</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-user-clock"></i>
+
+<h2>50</h2>
+
+<p>At Risk</p>
+
+</div>
+
+</section>
+
+<section class="search">
+
+<h2>Search Student</h2>
+
+<input
+type="text"
+id="rollNo"
+placeholder="Enter Roll No (MCA101)"
+>
+
+<button onclick="checkResult()">
+Search
+</button>
+
+</section>
+
+<section
+class="student-card"
+id="resultCard"
+style="display:none;">
+
+<h2 id="studentName"></h2>
+
+<p id="studentRoll"></p>
+
+<p id="studentStatus"></p>
+
+<div class="progress">
+
+<div
+class="progress-fill"
+id="progressBar">
+
+</div>
+
+</div>
+
+</section>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
